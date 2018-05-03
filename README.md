@@ -10,11 +10,9 @@ Go ahead and add the code required for enabling `mod::php` to our `init.pp` mani
 <details><summary>Click here for solution</summary>
 
 <p>
-
-~~~
+<code>
 class { '::apache::mod::php': }
-~~~
-
+</code>
 </p>
 </details>
 
