@@ -8,11 +8,11 @@ To learn how to do this read about it on [Puppet Forge Apache page](https://forg
 Go ahead and add the code required for enabling `mod::php` to our `init.pp` manifest under our `mediawiki` class. 
 
 <details><summary>Click here for solution</summary>
+
 <p>
 
-```
-  class { '::apache::mod::php': }
-```
+
+    class { '::apache::mod::php': }
 
 </p>
 </details>
