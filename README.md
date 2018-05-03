@@ -11,9 +11,9 @@ Go ahead and add the code required for enabling `mod::php` to our `init.pp` mani
 
 <p>
 
-```
+~~~
 class { '::apache::mod::php': }
-```
+~~~
 
 </p>
 </details>
