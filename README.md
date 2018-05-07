@@ -2,7 +2,7 @@
 
 This site contains the content and labs for the Puppet Fundamentals course.
 
-## [Course Content](http://bit.ly/fun-puppet)
+## [Course Content](http://bit.ly/fun-puppet-content)
 
 ## Day 1
 
