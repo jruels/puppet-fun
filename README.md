@@ -4,6 +4,9 @@ This site contains the content and labs for the Puppet Fundamentals course.
 
 ## [Course Content](http://bit.ly/fun-puppet-content)
 
+## Vagrant 
+Download the [Vagrantfile](https://raw.githubusercontent.com/jruels/puppet-fun/master/labs/Vagrantfile)
+
 ## Day 1
 
 ### Labs
