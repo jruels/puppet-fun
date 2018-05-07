@@ -1,0 +1,56 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.define "puppetmaster" do |puppetmaster|
+    puppetmaster.vm.box = "centos/6"
+    puppetmaster.vm.hostname = "puppetmaster.example.lab"
+    puppetmaster.vm.network "private_network", ip: "172.31.0.201"
+    #  virtualbox__intnet: true
+    
+    puppetmaster.vm.provider :virtualbox do |v|
+     v.customize ["modifyvm", :id, "--memory", 2048]
+    end
+  end
+
+  config.vm.define "wiki" do |wiki|
+    wiki.vm.box = "centos/6"
+    wiki.vm.hostname = "wiki.example.lab"
+    wiki.vm.network "private_network", ip: "172.31.0.202"
+    #  virtualbox__intnet: true
+   # wiki.vm.network "forwarded_port", guest: 80, host: 8080,
+   #   auto_correct: true
+
+    wiki.vm.provider :virtualbox do |v|
+     v.customize ["modifyvm", :id, "--memory", 2048]
+    end
+  end
+
+  config.vm.define "wikitest" do |wikitest|
+    wikitest.vm.box = "ubuntu/trusty64"
+    wikitest.vm.hostname = "wikitest.example.lab"
+    wikitest.vm.network "private_network", ip: "172.31.0.203"
+    #  virtualbox__intnet: true
+   # wikitest.vm.network "forwarded_port", guest: 80, host: 8081,
+   #   auto_correct: true
+
+    wikitest.vm.provider :virtualbox do |v|
+     v.customize ["modifyvm", :id, "--memory", 2048]
+    end
+  end
+  
+  config.vm.define "winadmin" do |winadmin|
+    winadmin.vm.box = "StefanScherer/windows_10"
+    winadmin.vm.hostname = "winadmin"
+    winadmin.vm.network "private_network", ip: "172.31.0.204"
+    #  virtualbox__intnet: true
+   # winadmin.vm.network "forwarded_port", guest: 80, host: 8082,
+   #   auto_correct: true
+
+    winadmin.vm.provider :virtualbox do |v|
+     v.customize ["modifyvm", :id, "--memory", 2048]
+    end
+  end
+
+end
