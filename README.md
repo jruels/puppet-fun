@@ -1,18 +1,21 @@
-# Puppet Fundamentals 
+# Puppet Fundamentals course page
 
+This site contains the content and labs for the Puppet Fundamentals course.
 
-## Testing collapsible code. 
-Now we need to enable `php` in our Apache module. 
-To learn how to do this read about it on [Puppet Forge Apache page](https://forge.puppet.com/puppetlabs/apache#class-apachemodphp)
+## [Course Content](http://bit.ly/fun-puppet)
 
-Go ahead and add the code required for enabling `mod::php` to our `init.pp` manifest under our `mediawiki` class. 
+## Day 1
 
-<details><summary>Click here for solution</summary>
+### Labs
 
-<p>
-<code>
-class { '::apache::mod::php': }
-</code>
-</p>
-</details>
+Lab 1: [Setup lab](labs/01-vbox-vagrant)
+
+Lab 2: [Puppet Master](labs/02-puppet-master/)
+
+Lab 3: [Security](labs/03-security)
+
+Lab 4: [Puppet Agent](labs/04-agent)
+
+Lab 5: [Creating a Puppet manifest](labs/05-manifests)
+
 
