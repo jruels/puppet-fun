@@ -76,12 +76,12 @@ Let's go ahead and remove all the content except for the class and the node defi
 
 Your file should look like this once complete. 
 ```
-node 'wiki' {
+node 'wiki.example.com' {
 
 
 }
 
-node 'wikitest' {
+node 'wikitest.example.com' {
 
 
 }
@@ -115,13 +115,13 @@ class linux {
 
 Now we are going to specify that each node should use the `linux` class, by changing the node definition to include:
 ```
-node 'wiki' {
+node 'wiki.example.lab' {
 
   class { 'linux': }
 
 }
 
-node 'wikitest' {
+node 'wikitest.example.lab' {
 
   class { 'linux': }
 
@@ -131,13 +131,13 @@ node 'wikitest' {
 
 Alright, the final file should now look like
 ```
-node 'wiki' {
+node 'wiki.example.lab' {
 
   class { 'linux': }
 
 }
 
-node 'wikitest' {
+node 'wikitest.example.lab' {
 
   class { 'linux': }
 
