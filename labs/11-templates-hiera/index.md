@@ -117,24 +117,17 @@ Based on the values from above update this file making sure to change it to matc
 
 
 
-<details><summary>Click here for solution</summary>
-
-<p>
-
-<code>
-- - - -
+```
+---
 classes:
-				- mediawiki
-				- linux
+        - mediawiki
+        - linux
 mediawiki::wikisitename: wikitest
 mediawiki::wikimetanamespace: Wikitest
 mediawiki::wikiserver: http://172.31.0.203
 mediawiki::wikidbname: wikitest
 
-  </code>
-
-</p>
-</details>
+```
 
 Now go ahead and add following values to `wikidefault.yaml`
 ```
@@ -202,7 +195,7 @@ Password: training
 Password again: training 
 ```
 
-then click the radio button "I'm bored already, just install the wiki" and click `Continue`  three more times, at this point it will prompt you to download the `LocalSettings.php` file but this isn't required anymore so just ignore that step. 
+then click the radio button `I'm bored already, just install the wiki` and click `Continue`  three more times, at this point it will prompt you to download the `LocalSettings.php` file but this isn't required any more so just ignore that step. 
 
 Now log into the `wikitest` server and run the puppet agent. 
 

@@ -20,18 +20,6 @@ After it installs go back to the [MySQL module page](https://forge.puppet.com/pu
 
 Now using what you learned on the MySQL module page update 	`init.pp` to install and configure a MySQL server with a root password of `training`
 
-<details><summary>Click here for solution</summary>
-
-<p>
-
-<code>
-  class { '::mysql::server':
-    root_password  => 'training',
-  }  
-</code>
-
-</p>
-</details>
 
 Run the puppet agent on both `Wiki` and `Wikitest` to install MySQL and configure it as specified in `init.pp`
 
@@ -66,11 +54,7 @@ You'll notice that the latest version is 1.12.0, but there's a bug in that versi
 After it is installed use the documentation on the [Puppet Forge Firewall](https://forge.puppet.com/puppetlabs/firewall) page to see how to enable it in  `init.pp` . 
 
 
-<details><summary>Click here for solution</summary>
-
-<p>
-
-<code>
+```
   class { '::firewall': }
   
   firewall { '000 allow http access':
@@ -85,11 +69,7 @@ After it is installed use the documentation on the [Puppet Forge Firewall](https
     action => 'accept'
   }  
 
-</code>
-
-</p>
-</details>
-
+```
 ## Maybe Optional
 Before we can run Puppet on the `Wiki` we have to create an IPTables file.
 
