@@ -232,6 +232,8 @@ Was it successful?
 
 <details><summary>Click here for resolution</summary>
 
+<p>
+
 On the `Wikitest` server you'll notice the Puppet agent threw an error that it couldn't clone the `Mediawiki` repo into `/var/www/html` because there was already a file in that directory. 
 
 To confirm this run 
@@ -251,5 +253,6 @@ In `init.pp` add something like
 Run the `puppet agent` on the `Wikitest` node and look at the output. 
 
 Did it work? 
+</p>
 
 # Lab Complete 
