@@ -26,14 +26,14 @@ Lab 5: [Creating a Puppet manifest](labs/05-manifests)
 
 Lab 6: [Packages and Services](labs/06-packages-services)
 
-Lab 7: [Selectors and Classes](07-selectors-classes)
+Lab 7: [Selectors and Classes](labs/07-selectors-classes)
 
-Lab 8: [Variables](08-variables)
+Lab 8: [Variables](labs/08-variables)
 
-Lab 9: [Modules and Conditionals](09-modules-conditionals)
+Lab 9: [Modules and Conditionals](labs/09-modules-conditionals)
 
-Lab 10: [Puppet Forge](10-more-modules)
+Lab 10: [Puppet Forge](labs/10-more-modules)
 
-Lab 11: [Templates and Hiera](11-templates-hiera)
+Lab 11: [Templates and Hiera](labs/11-templates-hiera)
 
 
