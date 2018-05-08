@@ -217,21 +217,14 @@ As with the `Apache` module we need to look at the [Config Page](https://forge.p
 
 Add the code for doing a `clone` of `REL1_23` branch of the `mediawiki` repo to `init.pp` manifest under our `mediawiki` class. 
 
-<details><summary>Click here for solution</summary>
-
-<p>
-
-<code>
+```  
   vcsrepo { '/var/www/html':
     ensure    => 'present',
     provider => 'git',
     source   => "https://github.com/wikimedia/mediawiki.git",
     revision  => 'REL1_23',
   }
-</code>
-
-</p>
-</details>
+```
 
 Now run the puppet agent on both the `Wiki` and `Wikitest` servers.
 
