@@ -19,7 +19,7 @@ Now let's add a section to create `/info.txt` and populate it with the date/time
 ## Puppet manifest (create file)
 Update `nodes.pp` to have the following. 
 ```
-node 'wiki' {
+node 'wiki.example.lab' {
 
   file { '/info.txt':
     ensure  => 'present',
@@ -27,7 +27,7 @@ node 'wiki' {
   }
 }
 
-node 'wikitest' {
+node 'wikitest.example.lab' {
 
 }
 ```
