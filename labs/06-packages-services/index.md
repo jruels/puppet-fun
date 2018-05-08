@@ -91,6 +91,23 @@ ntp:
   Installed: (none)
 ```
 
+If it is installed run the following to uninstall ntp 
+```
+sudo apt-get remove ntp 
+```
+
+Now if we do a `grep` we will see it's not running. 
+```
+ps auxww|grep -i [n]tp
+```
+
+We can also confirm it was completely removed with `apt-get`
+```
+apt-cache policy ntp 
+```
+
+It should say `Installed: (none)`
+
 Great, now that we've confirmed it is not installed let's go ahead and use the same `puppet agent` command we just ran on the CentOS server to install it. 
 
 Use `apt-cache policy` command from above to confirm `ntp` is now installed. 
@@ -208,7 +225,7 @@ ps auxww|grep -i [n]tp
 
 We can also confirm it was completely removed with `apt-get`
 ```
-apt-get policy ntp 
+apt-cache policy ntp 
 ```
 
 It should say `Installed: (none)`
