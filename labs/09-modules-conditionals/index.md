@@ -141,7 +141,7 @@ As you can see the default settings will be used if we just add the class
 
 In the `init.pp` we are going to add some code to our `mediawiki` class. 
 
-At the bottom add the following to install and configure `Apache`
+At the bottom of our `mediawiki` class add the following to install and configure `Apache`
 ```
   class { '::apache':
     docroot    => '/var/www/html',
@@ -160,7 +160,7 @@ This may be a little confusing so let's go through each of the different pieces 
 Now we need to enable `php` in our Apache module. 
 To learn how to do this read about it on [Puppet Forge Apache page](https://forge.puppet.com/puppetlabs/apache#class-apachemodphp)
 
-Go ahead and add the code required for enabling `mod::php` to our `init.pp` manifest under our `mediawiki` class. 
+Go ahead and add the code required for enabling `mod::php` to our `init.pp` manifest inside our `mediawiki` class. 
 
 <details><summary>Click here for solution</summary>
 
@@ -172,6 +172,18 @@ class { '::apache::mod::php': }
 
 </p>
 </details>
+
+It should now look like 
+```
+  class { '::apache':
+    docroot    => '/var/www/html',
+    mpm_module => 'prefork',
+    subscribe  => Package[$phpmysql],
+  }
+
+  class { '::apache::mod::php': }
+}
+```
 
 After updating the `init.pp`  log into both the wiki servers and run the puppet agent to apply the new Apache class. 
 
