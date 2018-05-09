@@ -97,7 +97,7 @@ Search for `PowerShell` in the start menu and then right click it and choose `Ru
 Run the following in the new `PowerShell` window to generate a certificate request.
 
 ```
-puppet agent --server puppet-master --waitforcert 60 --test
+puppet agent --server puppetmaster.example.lab --waitforcert 60 --test
 ```
 
 
