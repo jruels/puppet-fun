@@ -41,3 +41,5 @@ Lab 11: [Templates and Hiera](labs/11-templates-hiera)
 Lab 12: [Windows Puppet Agent](labs/12-windows-agent)
 
 Lab 13: [Roles and Profiles](labs/13-roles-profiles)
+
+Lab 14: [Version Control](labs/14-version-control)
