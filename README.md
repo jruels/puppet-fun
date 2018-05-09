@@ -36,4 +36,8 @@ Lab 10: [Puppet Forge](labs/10-more-modules)
 
 Lab 11: [Templates and Hiera](labs/11-templates-hiera)
 
+### Day 3
 
+Lab 12: [Windows Puppet Agent](labs/12-windows-agent)
+
+Lab 13: [Roles and Profiles](labs/13-roles-profiles)
