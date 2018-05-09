@@ -4,16 +4,16 @@ In this lab we are going to replace the manual process of filling out the MediaW
 ## ERB Template
 First we're going to start off by replacing the following parameters in `LocalSettings.php` so they look like the following. 
 ```
-$wgSitename = "<%= wikisitename %>";
-$wgServer = "<%= wikiserver %>";
-$wgDBserver = "<%= wikidbserver %>";
-$wgDBname = "<%= wikidbname %>";
-$wgDBuser = "<%= wikidbuser %>";
-$wgDBpassword = "<%= wikidbpassword %>";
-$wgUpgradeKey = "<%= wikiupgradekey %>";
+$wgSitename = "<%= @wikisitename %>";
+$wgServer = "<%= @wikiserver %>";
+$wgDBserver = "<%= @wikidbserver %>";
+$wgDBname = "<%= @wikidbname %>";
+$wgDBuser = "<%= @wikidbuser %>";
+$wgDBpassword = "<%= @wikidbpassword %>";
+$wgUpgradeKey = "<%= @wikiupgradekey %>";
 ```
 
-Now that we've done that let's copy the contents of `LocalSettings.php` file and paste it into `/etc/puppetlabs/code/environments/production/modules/templates/LocalSettings.erb`
+Now that we've done that let's copy the contents of `LocalSettings.php` file and paste it into `/etc/puppetlabs/code/environments/production/modules/mediawiki/templates/LocalSettings.erb`
 You will need to create the templates directory. 
 
 
