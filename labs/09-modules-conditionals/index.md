@@ -264,4 +264,6 @@ Run the `puppet agent` on the `Wikitest` node and look at the output.
 
 Did it work? 
 
+This should fail and in our next lab we will add an `order arrow` to tell it to remove `index.html` prior to cloning the `mediawiki` repo. 
+
 # Lab Complete 
