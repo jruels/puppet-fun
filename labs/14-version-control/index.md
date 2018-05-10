@@ -104,8 +104,6 @@ open up the file and delete some random lines, make sure you get some of the req
 sudo vim /etc/puppetlabs/code/environments/production/modules/mediawiki/templates/LocalSettings.erb
 ```
 
-Delete some of the 
-
 After "cleaning" up the file let's go ahead and commit it with `Git`
 
 ```
