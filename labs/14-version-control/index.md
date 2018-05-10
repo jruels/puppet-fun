@@ -29,7 +29,7 @@ sudo service puppet start
 
 Enable agent on boot
 ```
-sudo update-rc.d puppet on 
+sudo update-rc.d puppet enable 
 ```
 
 Once this is complete let's make the following change to both `wiki` and `wikitest`
@@ -74,7 +74,7 @@ sudo git init
 
 Add all of the files to `Git`
 ```
-git init add . 
+sudo git add . 
 ```
 
 We need to commit all of these files for the first time so let's go ahead and do that. 
@@ -150,6 +150,21 @@ Now scroll down until you see where you deleted the `wg` database variables.
 Were they restored? 
 
 Now go load up both Mediawiki sites and confirm they work again. 
+
+Sometimes we make changes to a file and don't have a chance to actually commit the file.  In this case it wouldn't really make sense to revert to the last commit so instead we can use the `git reset` command. 
+
+On the Puppet master edit your `LocalSettings.erb` and delete a bunch of lines from it, making sure to delete some of the database variables. 
+
+Now if you save that file and wait a minute you'll notice both mediawiki sites are down.  
+
+To resolve this we can reset the git repository to before we made those changes by running 
+```
+sudo git reset HEAD --hard 
+```
+
+To confirm this worked go ahead and reload your mediawiki websites and they should be back online. 
+
+You can also look at the `LocalSettings.erb` file and confirm it has all the lines you previously deleted. 
 
 # Lab Complete 
 
